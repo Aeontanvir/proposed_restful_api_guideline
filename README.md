@@ -36,13 +36,13 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 
 
 
-## Preface
+## 1 Preface
 
 In this document I am writing a very basic RESTful API and  common patterns and best practices followed by industry for designing a RESTful API. Best practices are  dictated by use cases, problem spaces, preferences and way of solving problems. I am welcoming everybody for feedback and suggestions. I am all ears.
 
 
 
-## Overview
+## 2 Overview
 
 ### Brief Overview
 RESTful which stands for REpresentational State Transfer. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture. To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over HTTP with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers. REST interfaces with external systems using resources identified by URI,  which can be operated upon using standard verbs
@@ -52,12 +52,12 @@ In the RESTful API we represent the state of resources.
 
 
 
-## RESTful vs CRUDful
+## 3 RESTful vs CRUDful
 A very common misconception is that RESTful also means CRUDful. CRUD is an operation that we do on resources. REST is the way in which we represent the state of a resource before or after doing CRUD operation(s).
 
 
 
-## Characteristics and Constraints of RESTful Server
+## 4 Characteristics and Constraints of RESTful Server
 
 A RESTful server 
 
@@ -73,7 +73,7 @@ A RESTful server
 
 
 
-## Key Points to Remember
+## 5 Key Points to Remember
 
 While designing a RESTful API interface we must keep these 5 points in mind. Each point deserves a paragraph and further explanation. I am leaving it  to explore for others.
 
@@ -85,7 +85,7 @@ While designing a RESTful API interface we must keep these 5 points in mind. Eac
 
 
 
-## Understanding RESTful API verbs 
+## 6 Understanding RESTful API verbs 
 
 1. GET:  When a client needs to access resources it must initiate a HTTP GET request to the API server. RESTful API Server sends only that information to fulfill clients' needs according to its access level or reject requests with proper error messages. Such kind of requests must be idempotent and safe.
 2. POST:  When a client needs to create a resource it must initiate HTTP POST request to the API server. A RESTful API server must send a resource identifier  on success or reject requests with proper error messages. Such kind of requests are not safe and not idempotent.
@@ -96,7 +96,7 @@ While designing a RESTful API interface we must keep these 5 points in mind. Eac
 
 
 
-## Planning a RESTful API
+## 7 Planning a RESTful API
 
 Somewhere I read that a better planning makes job done half. When you are planning  a RESTful API  you must have clear vision on 
 
@@ -106,13 +106,13 @@ Somewhere I read that a better planning makes job done half. When you are planni
 4. Separation of concern
 
 
-## Uniform Interface
+## 8 Uniform Interface
 
 Servers must have uniform Interfaces to access resources which must be unique and based on above criterias.
 
 
 
-## Design Pattern of Uniform Interfaces (aka Endpoints)
+## 9 Design Pattern of Uniform Interfaces (aka Endpoints)
 
 ### Overview
 
