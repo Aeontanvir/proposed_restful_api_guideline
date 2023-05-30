@@ -7,7 +7,7 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 - 1 Preface
 - 2 Overview
     - 2.1 Brief Overview
-    - 2.3 Where the State comes from
+    - 2.2 Where the State comes from
 - 3 Characteristics and Constraints of RESTful Server
 - 4 Key Points to Remember
 - 5 Understanding RESTful API verbs
