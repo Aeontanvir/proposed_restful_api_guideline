@@ -178,5 +178,34 @@ Content-Type: {payload-content-type};charset=UTF-8
 ACCEPT: {Response Data format accepted by client}
 ```
 
+Response Header:
+
+Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
+
+```
+GET HTTP/1.1 
+StatusCode: {Standard HTTP Header Code}
+Content-Type: {resource-content-type};charset=UTF-8
+ACCEPT: {REQ data format accepted by Server}
+```
+
+Response Data Format: 
+
+For example here client wants to get User list and If user
+
+```
+{
+    "total": {number},
+    "status": {boolean},
+    "statusCode": "{integer-http-status-code}",
+    "offset": {number},
+    "limit": {number},
+    "order": {ascending/descending},
+    "orderBy": "{fieldName}",
+    "message" : {human-friendly-message}
+    "data": [array-of-user-resources]
+}
+```
+
 
 
