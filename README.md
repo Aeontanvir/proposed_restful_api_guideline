@@ -4,20 +4,20 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 
 ### Table of Content
 
-1. Preface
-2. Overview
-    1. Brief Overview
-    2. Where the State comes from
-3. Characteristics and Constraints of RESTful Server
-4. Key Points to Remember
-5. Understanding RESTful API verbs
-6. Planning a RESTful API
-7. Uniform Interface
-8. Design Pattern of Uniform Interfaces (aka Endpoints)
-    1. Overview
-    2. Basic Design Patterns
-9. Request and Response Format
-10. Exception Handling and Error Response Format
+- 1 Preface
+- 2 Overview
+    - 2.1 Brief Overview
+    - 2.3 Where the State comes from
+- 3 Characteristics and Constraints of RESTful Server
+- 4 Key Points to Remember
+- 5 Understanding RESTful API verbs
+- 6 Planning a RESTful API
+- 7 Uniform Interface
+- 8 Design Pattern of Uniform Interfaces (aka Endpoints)
+    - 8.1 Overview
+    - 8.2 Basic Design Patterns
+- 9 Request and Response Format
+- 10 Exception Handling and Error Response Format
 
 
 
