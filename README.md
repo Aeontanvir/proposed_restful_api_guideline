@@ -2,7 +2,7 @@
 
 RESTful API best practices include: meaningful resource endpoints, proper HTTP verbs, clear error handling, pagination and filtering, content negotiation, secure authentication and authorization, versioning, comprehensive documentation, performance optimization, and adherence to naming conventions and REST constraints.
 
-## Table of Content
+### Table of Content
 
 1. Preface
 2. Overview
@@ -21,7 +21,7 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 
 
 
-## How to use this Document
+### How to use this Document
 
 1. HEADING NUMBERINGS: This document uses the following Google Docs Add-on (see the Add-ons menu in the menu bar) to generate the heading numberings automatically. After you have added a new heading, please use this Add-on to re-update the heading numbers. The Add-on appears as a right-side sidebar.
 2. BOOKMARKS: In order to refer to specific places in this document from other tools like JIRA/Wrike/Trello, please use the bookmark feature. To create, place cursor at the place (except any heading since heading bookmarks get replaced by the TOC add-on) for which you want to create a bookmark and from Insert menu, select Bookmark. If any bookmark  link doesn't work any more, re-create the bookmark and use the new link.
@@ -36,7 +36,7 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 
 
 
-# Preface
+## Preface
 
 In this document I am writing a very basic RESTful API and  common patterns and best practices followed by industry for designing a RESTful API. Best practices are  dictated by use cases, problem spaces, preferences and way of solving problems. I am welcoming everybody for feedback and suggestions. I am all ears.
 
