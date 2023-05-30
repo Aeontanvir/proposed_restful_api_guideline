@@ -146,3 +146,37 @@ Response Header StatusCode must be semantic with [Hypertext Transfer Protocol (H
 | `PATCH` | UPDATE | Identifier or updated data | /api/{version}/{Models}/{identifier} | Partial update of a resource | 
 | `DELETE` | DELETE RESOURCE | nothing | /api/{version}/{Models}/{identifier} | Delete a resource |
 
+
+
+## 10 Request and Response Format
+
+### 10.1 Overview
+
+When we design request and response format we must need to keep the following things in mind
+
+1. Requests must be authenticated before sending data if it is not open to the public.
+2. Resources must be sent to clients which he is authorized for.
+3. Resources must reflect the latest state of it.
+4. Request and response format must be developer friendly.
+5. Unnecessary multiple hierarchy  must be avoided while designing Request or Response format 
+6. Request and Response format must be decided before coding
+7. Request and response data types must represent the type of resources
+8. No extra data should be sent in response unless it makes sense.
+9. Request and Response field names should be camelcase or convention given by corresponding team and must be consistent system-wide.
+
+### 10.2 Accessing Resource(s)
+
+### 10.2.1 Accessing Collection of Resources
+
+EndPoint: GET [/api/{version}]/users
+
+Request Header:
+
+``
+GET HTTP/1.1 
+Content-Type: {payload-content-type};charset=UTF-8
+ACCEPT: {Response Data format accepted by client}
+``
+
+
+
