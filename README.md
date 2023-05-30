@@ -137,14 +137,14 @@ Response Header StatusCode must be semantic with [Hypertext Transfer Protocol (H
 
 | HTTP Method | Operation | Returns | API | Description |
 | --- | --- | --- | --- | --- |
-| `GET` | READ | Collection | /api/{version}/{Models} | Accessing collection of Models | 
-| `GET` | READ | Single Resource | /api/{version}/{Models}/{identifier} | A single Model resource | 
-| `GET` | READ | Filtered Collection | /api/{version}/{Models}?filter{Model}.{fieldName}={value}&.. | Filter a collection based on different values of a field | 
-| `GET` | READ | Paginated Collection | /api/{version}/{Models}?offset={offset}&limit={limit} | Paginating a collection | 
-| `POST` | CREATE | Create Resource | /api/{version}/{Models} | Create a resource | 
-| `PUT` | REPLACE | Identifier or updated data | /api/{version}/{Models}/{identifier} | Replacing a resource | 
-| `PATCH` | UPDATE | Identifier or updated data | /api/{version}/{Models}/{identifier} | Partial update of a resource | 
-| `DELETE` | DELETE RESOURCE | nothing | /api/{version}/{Models}/{identifier} | Delete a resource |
+| `GET` | READ | Collection | `/api/{version}/{Models}` | Accessing collection of Models | 
+| `GET` | READ | Single Resource | `/api/{version}/{Models}/{identifier}` | A single Model resource | 
+| `GET` | READ | Filtered Collection | `/api/{version}/{Models}?filter{Model}.{fieldName}={value}&..` | Filter a collection based on different values of a field | 
+| `GET` | READ | Paginated Collection | `/api/{version}/{Models}?offset={offset}&limit={limit}` | Paginating a collection | 
+| `POST` | CREATE | Create Resource | `/api/{version}/{Models}` | Create a resource | 
+| `PUT` | REPLACE | Identifier or updated data | `/api/{version}/{Models}/{identifier}` | Replacing a resource | 
+| `PATCH` | UPDATE | Identifier or updated data | `/api/{version}/{Models}/{identifier}` | Partial update of a resource | 
+| `DELETE` | DELETE RESOURCE | nothing | `/api/{version}/{Models}/{identifier}` | Delete a resource |
 
 
 
@@ -168,7 +168,7 @@ When we design request and response format we must need to keep the following th
 
 ### 10.2.1 Accessing Collection of Resources
 
-EndPoint: GET [/api/{version}]/users
+EndPoint: GET `/api/{version}/users`
 
 Request Header:
 
