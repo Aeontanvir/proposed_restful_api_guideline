@@ -135,6 +135,9 @@ Legends:
 
 Response Header StatusCode must be semantic with [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 
-| HTTP Method | Operation | Returns | Description |
-| --- | --- | --- | --- |
+| HTTP Method | Operation | Returns | API | Description |
+| --- | --- | --- | --- | --- |
 | `GET` | READ | Collection | /api/{version}/{Models} | Accessing collection of Models | 
+| `GET` | READ | Single Resource | /api/{version}/{Models}/{identifier} | A single Model resource | 
+| `GET` | READ | Filtered Collection | /api/{version}/{Models}?filter{Model}.{fieldName}={value}&.. | Filter a collection based on different values of a field | 
+| `GET` | READ | Paginated Collection | /api/{version}/{Models}?offset={offset}&limit={limit} | Paginating a collection | 
