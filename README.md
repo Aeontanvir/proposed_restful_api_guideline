@@ -19,6 +19,7 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
     - 8.2 Basic Design Patterns
 - 10 Request and Response Format
 - 11 Exception Handling and Error Response Format
+- 12 References/Resources
 
 
 
@@ -471,6 +472,16 @@ Validation Error Format:
     }
 }
 ```
+
+
+
+
+# 12 References/Resources
+
+1. [JSON:API — A specification for building APIs in JSON](http://jsonapi.org)
+2. [OpenAPI-Specification/3.0.3.md at master · OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md)
+3. [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+
 
 
 
