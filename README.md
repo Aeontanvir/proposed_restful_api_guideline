@@ -172,11 +172,11 @@ EndPoint: GET [/api/{version}]/users
 
 Request Header:
 
-``
+```
 GET HTTP/1.1 
 Content-Type: {payload-content-type};charset=UTF-8
 ACCEPT: {Response Data format accepted by client}
-``
+```
 
 
 
