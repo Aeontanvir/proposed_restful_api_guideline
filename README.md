@@ -416,5 +416,20 @@ Response  Body:
 
 
 
+## 11 Exception Handling and Error Response Format
+
+### 11.1 Standard Status Code for various  common errors
+
+| Error Type | Status Code | Description | 
+| Unauthenticated | 401 | When user is not authenticated | 
+| Forbidden | 403 | Unauthorized resource access or manipulation attempt |
+| Not Found | 404 | Resource not Found | 
+| Validation Error | 422/400 | Validation error | 
+| Server Error | 500 | Server internal error | 
+
+
+
+
+
 
 
