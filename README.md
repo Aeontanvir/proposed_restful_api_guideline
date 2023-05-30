@@ -114,7 +114,7 @@ Servers must have uniform Interfaces to access resources which must be unique an
 
 ## Design Pattern of Uniform Interfaces (aka Endpoints)
 
-## Overview
+### Overview
 
 While designing Endpoints we need to keep these things in mind
 
