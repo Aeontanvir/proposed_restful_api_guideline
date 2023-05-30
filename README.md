@@ -46,14 +46,17 @@ In this document I am writing a very basic RESTful API and  common patterns and 
 ## 2 Overview
 
 ### Brief Overview
+
 RESTful which stands for REpresentational State Transfer. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture. To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over HTTP with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers. REST interfaces with external systems using resources identified by URI,  which can be operated upon using standard verbs
 
 ### Where the State comes from
+
 In the RESTful API we represent the state of resources. 
 
 
 
 ## 3 RESTful vs CRUDful
+
 A very common misconception is that RESTful also means CRUDful. CRUD is an operation that we do on resources. REST is the way in which we represent the state of a resource before or after doing CRUD operation(s).
 
 
