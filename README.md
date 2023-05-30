@@ -33,3 +33,9 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 8. STAND-OUT TEXT: Please use the color "cornflower blue" from the font colors menu for any stand-out text.
 9. ANY COPY-PASTE: In order to not disrupt the formattings of this document, please don't do any copy-paste directly to this document. First paste the content to any plain text editor so that any source formatting is removed and then copy it again from the editor and paste to this document.
 10. COMMENTING: To comment and discuss on any part of text of the document, please select the text and use the Ctrl-Alt-M commenting feature.
+
+
+
+# Preface
+
+In this document I am writing a very basic RESTful API and  common patterns and best practices followed by industry for designing a RESTful API. Best practices are  dictated by use cases, problem spaces, preferences and way of solving problems. I am welcoming everybody for feedback and suggestions. I am all ears.
