@@ -21,7 +21,7 @@ Table of Content
 <ul>
 <li>Overview</li>
 <li>Basic Design Patterns</li>
-<ul>
+</ul>
 </li>
 <li>Request and Response Format</li>
 <li>Exception Handling and Error Response Format</li>
