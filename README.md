@@ -124,4 +124,14 @@ While designing Endpoints we need to keep these things in mind
 4. Port is optional if services run on standard HTTP port (80)
 5. Listing proper Headers for an endpoint depending on which type of resources we are dealing with
 
+### Basic Design Patterns
+
+Legends: 
+
+1. Variables:  {}
+2. Resource Entities:  Capitalized and enclosed with {}
+3. Resource Identifier: small letter enclosed with {}
+4. Optional: []
+
+Response Header StatusCode must be semantic with [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 
