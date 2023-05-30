@@ -428,6 +428,45 @@ Response  Body:
 | Validation Error | 422/400 | Validation error | 
 | Server Error | 500 | Server internal error | 
 
+Error Response:
+
+Response Header:
+
+Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
+
+```
+GET HTTP/1.1 
+StatusCode: {Standard HTTP Header Code}
+Content-Type: {resource-content-type};charset=UTF-8
+ACCEPT: {REQ Data format accepted}
+{
+     "error": {
+          "name":"{ErrorName}",
+          "statusCode": "{header-status-error-code}",
+          "message" : "{human-friendly-message}"
+          "stackTrace": "{for developer only. this field is not sent in production}"
+     }
+}
+```
+
+Validation Error Format:
+
+```
+{
+     "error": {
+          "name":"ValidationError",
+          "statusCode": 400,
+          "stackTrace": "{for developer only. this field is not sent in production}",
+          "details" : [
+              {
+                “fieldName”: “{name of the field}”,
+                "value": "{given-value}", 
+                “message”: “{reason of error}”
+              }
+          ]
+    }
+}
+```
 
 
 
