@@ -166,7 +166,7 @@ When we design request and response format we must need to keep the following th
 
 ### 10.2 Accessing Resource(s)
 
-### 10.2.1 Accessing Collection of Resources
+#### 10.2.1 Accessing Collection of Resources
 
 EndPoint: GET `/api/{version}/users`
 
@@ -206,6 +206,215 @@ For example here client wants to get User list and If user
     "data": [array-of-user-resources]
 }
 ```
+
+#### 10.2.2 Accessing Single Resource
+
+EndPoint: GET `/api/{version}/users/{identifier}`
+
+Request Header:
+
+```
+GET HTTP/1.1 
+Content-Type: {request-content-type};charset=UTF-8
+ACCEPT: {Response Data format accepted by client}
+```
+
+Response Header:
+
+Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
+
+```
+GET HTTP/1.1 
+StatusCode: {Standard HTTP Header Code}
+Content-Type: {request-content-type};charset=UTF-8
+ACCEPT: {REQ Data format accepted By Server}
+```
+
+Response Data Format: 
+
+For example here client wants to get User list and If user
+
+```
+{
+    "status": {boolean},
+    "statusCode": "{integer-http-status-code}",
+    "message" : "{optional-good-to-have-one}",
+    "data": {
+         "firstName": "{firstname}",
+         "lastName": "{firstname}",
+         ...     
+    }
+}
+```
+
+### 10.3 Creating A Resource
+
+#### 10.3.1 Single Resource
+
+EndPoint: POST `/api/{version}/users`
+
+Request Header:
+
+```
+GET HTTP/1.1 
+Content-Type: {payload-content-type};charset=UTF-8
+ACCEPT: {Response Data format accepted by client}
+```
+
+In request body 
+
+```
+{
+    "firstName" : "{string}",
+    "lastName": "{String}",
+    ...
+}
+```
+
+Response Header:
+
+Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
+
+```
+GET HTTP/1.1 
+StatusCode: {Standard HTTP Header Code}
+Content-Type: {request-content-type};charset=UTF-8
+ACCEPT: {REQ Data format accepted by server}
+```
+
+Response Data Format: 
+
+For example here client wants to get User list and If user. Returning user object is also depends on business necessity.
+
+```
+{
+    "status": {boolean},
+    "statusCode" : "{integer-http-status-code}",
+    "message" : {human-friendly-message}
+    "data": {
+         "firstName": "{firstname}",
+         "lastName": "{firstname}",
+         ...     
+    }
+}
+```
+
+### 10.4 Altering  a Resource
+We can alter a resource in two ways
+
+1. Replacing the resource
+2. Updating the resource
+
+#### 10.4.1 Replacing the Resource
+
+When we replace a resource we use HTTP PUT method. When we are replacing a resource we must send the all  corresponding fields of  resource. If any field is missing API server must throw a validation error to  client
+
+##### 10.4.1.1 Single Resource
+
+EndPoint: PUT `/api/{version}/users/{identifier}`
+
+Request Header:
+
+```
+GET HTTP/1.1 
+Content-Type: {payload-content-type};charset=UTF-8
+ACCEPT: {Response Data format accepted by client}
+```
+
+In request body (full user object)
+
+```
+{
+    "firstName" : "{string}",
+    "lastName": "{String}",
+    ...
+}
+```
+
+Response Header:
+
+Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
+
+```
+GET HTTP/1.1 
+StatusCode: {Standard HTTP Header Code}
+Content-Type: {request-content-type};charset=UTF-8
+ACCEPT: {REQ Data format accepted by server}
+```
+
+Response Data Format: 
+
+For example here client wants to get User list and If user. Returning user object is also depends on business necessity.
+
+```
+{
+    "status": {boolean},
+    "statusCode" : "{integer-http-status-code}",
+    "message" : {human-friendly-message}
+    "data": {
+         "firstName": "{firstname}",
+         "lastName": "{firstname}",
+         ...     
+    }
+}
+```
+
+#### 10.4.2 Updating A Resource
+
+##### 9.4.2.1 Single Resource
+
+The original Resource
+
+```
+{  
+     "firstName": "Tanvir",  
+     "lastName": "Khan" 
+}
+```
+
+EndPoint: PATCH `/api/{version}/users/{identifier}`
+
+Request Header:
+
+```
+GET HTTP/1.1 
+Content-Type: application/vnd.api+json; ext=jsonpatch;charset=UTF-8
+Accept: application/vnd.api+json; ext=jsonpatch;charset=UTF-8
+```
+
+Request Body: 
+
+```
+[
+   { "op": "replace", "path": "/firstName", "value": "Boo" },
+   { "op": "add", "path": "/email", "value": ["pro.nmrony@gmail.com", "pro.nmrony@yahoo.com"] },
+   { "op": "remove", "path": "/lastName"}
+]
+```
+
+Response Header:
+
+```
+GET HTTP/1.1 
+Content-Type: application/vnd.api+json; ext=jsonpatch
+Accept: application/vnd.api+json; ext=jsonpatch
+```
+
+Response  Body: 
+
+```
+{
+   "status": "{boolean}",
+   "message": "{human friendly message}",
+   "statusCode": "{http-header-statuscode}"
+   "data": {
+           "firstName": "Boo",
+           "email": ["user1@gmail.com", "user2@yahoo.com"]
+     }
+}
+```
+
+
 
 
 
