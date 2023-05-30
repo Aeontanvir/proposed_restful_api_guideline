@@ -39,3 +39,7 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 # Preface
 
 In this document I am writing a very basic RESTful API and  common patterns and best practices followed by industry for designing a RESTful API. Best practices are  dictated by use cases, problem spaces, preferences and way of solving problems. I am welcoming everybody for feedback and suggestions. I am all ears.
+
+
+
+
