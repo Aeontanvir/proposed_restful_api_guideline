@@ -4,10 +4,10 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 
 ### Table of Content
 
-- 1 [Preface](#preface)
-- 2 Overview
-    - 2.1 Brief Overview
-    - 2.2 Where the State comes from
+- [1. Preface](#preface)
+- [2. Overview](#overview)
+    - [2.1. Brief Overview](#overview_brief)
+    - [2.2. Where the State comes from](#overview_where)
 - 3 RESTful vs CRUDful
 - 4 Characteristics and Constraints of RESTful Server
 - 5 Key Points to Remember
@@ -44,13 +44,13 @@ In this document I am writing a very basic RESTful API and  common patterns and 
 
 
 
-## 2 Overview
+## 2. Overview <a id="overview"></a>
 
-### Brief Overview
+### 2.1. Brief Overview <a id="overview_brief"></a>
 
 RESTful which stands for **RE**presentational **S**tate **T**ransfer. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture. To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over HTTP with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers. REST interfaces with external systems using resources identified by URI,  which can be operated upon using standard verbs
 
-### Where the State comes from
+### 2.2. Where the State comes from <a id="overview_where"></a>
 
 In the RESTful API we represent the state of resources. 
 
