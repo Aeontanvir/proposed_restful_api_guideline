@@ -56,13 +56,13 @@ In the RESTful API we represent the state of resources.
 
 
 
-## 3 RESTful vs CRUDful <a id="restful"></a>
+## 3. RESTful vs CRUDful <a id="restful"></a>
 
 A very common misconception is that RESTful also means CRUDful. CRUD is an operation that we do on resources. REST is the way in which we represent the state of a resource before or after doing CRUD operation(s).
 
 
 
-## 4 Characteristics and Constraints of RESTful Server <a id="characteristics"></a>
+## 4. Characteristics and Constraints of RESTful Server <a id="characteristics"></a>
 
 A RESTful server 
 
@@ -78,7 +78,7 @@ A RESTful server
 
 
 
-## 5 Key Points to Remember <a id="key"></a>
+## 5. Key Points to Remember <a id="key"></a>
 
 While designing a RESTful API interface we must keep these 5 points in mind. Each point deserves a paragraph and further explanation. I am leaving it  to explore for others.
 
@@ -90,7 +90,7 @@ While designing a RESTful API interface we must keep these 5 points in mind. Eac
 
 
 
-## 6 Understanding RESTful API verbs  <a id="undestanding"></a>
+## 6. Understanding RESTful API verbs  <a id="undestanding"></a>
 
 1. `GET:`  When a client needs to access resources it must initiate a HTTP GET request to the API server. RESTful API Server sends only that information to fulfill clients' needs according to its access level or reject requests with proper error messages. Such kind of requests must be idempotent and safe.
 2. `POST:`  When a client needs to create a resource it must initiate HTTP POST request to the API server. A RESTful API server must send a resource identifier  on success or reject requests with proper error messages. Such kind of requests are not safe and not idempotent.
@@ -101,7 +101,7 @@ While designing a RESTful API interface we must keep these 5 points in mind. Eac
 
 
 
-## 7 Planning a RESTful API <a id="planning"></a>
+## 7. Planning a RESTful API <a id="planning"></a>
 
 Somewhere I read that a better planning makes job done half. When you are planning  a RESTful API  you must have clear vision on 
 
@@ -111,7 +111,7 @@ Somewhere I read that a better planning makes job done half. When you are planni
 4. Separation of concern
 
 
-## 8 Uniform Interface <a id="uniform"></a>
+## 8. Uniform Interface <a id="uniform"></a>
 
 Servers must have uniform Interfaces to access resources which must be unique and based on above criterias.
 
