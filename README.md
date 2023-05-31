@@ -119,7 +119,7 @@ Servers must have uniform Interfaces to access resources which must be unique an
 
 ## 9 Design Pattern of Uniform Interfaces (aka Endpoints)
 
-### Overview
+### 9.1 Overview
 
 While designing Endpoints we need to keep these things in mind
 
@@ -129,9 +129,9 @@ While designing Endpoints we need to keep these things in mind
 4. Port is optional if services run on standard HTTP port (80)
 5. Listing proper Headers for an endpoint depending on which type of resources we are dealing with
 
-### Basic Design Patterns
+### 9.2 Basic Design Patterns
 
-Legends: 
+**Legends:** 
 
 1. Variables:  {}
 2. Resource Entities:  Capitalized and enclosed with {}
@@ -173,9 +173,9 @@ When we design request and response format we must need to keep the following th
 
 #### 10.2.1 Accessing Collection of Resources
 
-EndPoint: GET `/api/{version}/users`
+**EndPoint:* `GET` `/api/{version}/users`
 
-Request Header:
+**Request Header:**
 
 ```
 GET HTTP/1.1 
@@ -183,7 +183,7 @@ Content-Type: {payload-content-type};charset=UTF-8
 ACCEPT: {Response Data format accepted by client}
 ```
 
-Response Header:
+**Response Header:**
 
 Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
 
@@ -194,7 +194,7 @@ Content-Type: {resource-content-type};charset=UTF-8
 ACCEPT: {REQ data format accepted by Server}
 ```
 
-Response Data Format: 
+**Response Data Format:** 
 
 For example here client wants to get User list and If user
 
@@ -214,9 +214,9 @@ For example here client wants to get User list and If user
 
 #### 10.2.2 Accessing Single Resource
 
-EndPoint: GET `/api/{version}/users/{identifier}`
+**EndPoint:** `GET` `/api/{version}/users/{identifier}`
 
-Request Header:
+**Request Header:**
 
 ```
 GET HTTP/1.1 
@@ -224,7 +224,7 @@ Content-Type: {request-content-type};charset=UTF-8
 ACCEPT: {Response Data format accepted by client}
 ```
 
-Response Header:
+**Response Header:**
 
 Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
 
@@ -235,7 +235,7 @@ Content-Type: {request-content-type};charset=UTF-8
 ACCEPT: {REQ Data format accepted By Server}
 ```
 
-Response Data Format: 
+**Response Data Format:**
 
 For example here client wants to get User list and If user
 
@@ -256,9 +256,9 @@ For example here client wants to get User list and If user
 
 #### 10.3.1 Single Resource
 
-EndPoint: POST `/api/{version}/users`
+**EndPoint:** `POST` `/api/{version}/users`
 
-Request Header:
+**Request Header:**
 
 ```
 GET HTTP/1.1 
@@ -266,7 +266,7 @@ Content-Type: {payload-content-type};charset=UTF-8
 ACCEPT: {Response Data format accepted by client}
 ```
 
-In request body 
+In request **body** 
 
 ```
 {
@@ -276,7 +276,7 @@ In request body
 }
 ```
 
-Response Header:
+**Response Header:**
 
 Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
 
@@ -287,7 +287,7 @@ Content-Type: {request-content-type};charset=UTF-8
 ACCEPT: {REQ Data format accepted by server}
 ```
 
-Response Data Format: 
+**Response Data Format:** 
 
 For example here client wants to get User list and If user. Returning user object is also depends on business necessity.
 
@@ -316,9 +316,9 @@ When we replace a resource we use HTTP PUT method. When we are replacing a resou
 
 ##### 10.4.1.1 Single Resource
 
-EndPoint: PUT `/api/{version}/users/{identifier}`
+**EndPoint:** `PUT` `/api/{version}/users/{identifier}`
 
-Request Header:
+**Request Header:**
 
 ```
 GET HTTP/1.1 
@@ -326,7 +326,7 @@ Content-Type: {payload-content-type};charset=UTF-8
 ACCEPT: {Response Data format accepted by client}
 ```
 
-In request body (full user object)
+In request **body** (full user object)
 
 ```
 {
@@ -336,7 +336,7 @@ In request body (full user object)
 }
 ```
 
-Response Header:
+**Response Header:**
 
 Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
 
@@ -347,7 +347,7 @@ Content-Type: {request-content-type};charset=UTF-8
 ACCEPT: {REQ Data format accepted by server}
 ```
 
-Response Data Format: 
+**Response Data Format:** 
 
 For example here client wants to get User list and If user. Returning user object is also depends on business necessity.
 
@@ -368,7 +368,7 @@ For example here client wants to get User list and If user. Returning user objec
 
 ##### 9.4.2.1 Single Resource
 
-The original Resource
+**The original Resource**
 
 ```
 {  
@@ -377,9 +377,9 @@ The original Resource
 }
 ```
 
-EndPoint: PATCH `/api/{version}/users/{identifier}`
+**EndPoint:** `PATCH` `/api/{version}/users/{identifier}`
 
-Request Header:
+**Request Header:**
 
 ```
 GET HTTP/1.1 
@@ -387,7 +387,7 @@ Content-Type: application/vnd.api+json; ext=jsonpatch;charset=UTF-8
 Accept: application/vnd.api+json; ext=jsonpatch;charset=UTF-8
 ```
 
-Request Body: 
+**Request Body:**
 
 ```
 [
@@ -397,7 +397,7 @@ Request Body:
 ]
 ```
 
-Response Header:
+**Response Header:**
 
 ```
 GET HTTP/1.1 
@@ -405,7 +405,7 @@ Content-Type: application/vnd.api+json; ext=jsonpatch
 Accept: application/vnd.api+json; ext=jsonpatch
 ```
 
-Response  Body: 
+**Response  Body:** 
 
 ```
 {
@@ -435,7 +435,7 @@ Response  Body:
 
 Error Response:
 
-Response Header:
+**Response Header:**
 
 Below mandatory header fields are listed. Header field may vary depending on information needed to fulfill the request(ie. authentication, authorization etc),
 
@@ -454,7 +454,7 @@ ACCEPT: {REQ Data format accepted}
 }
 ```
 
-Validation Error Format:
+**Validation Error Format:**
 
 ```
 {
