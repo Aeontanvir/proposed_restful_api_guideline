@@ -48,7 +48,7 @@ In this document I am writing a very basic RESTful API and  common patterns and 
 
 ### Brief Overview
 
-RESTful which stands for REpresentational State Transfer. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture. To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over HTTP with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers. REST interfaces with external systems using resources identified by URI,  which can be operated upon using standard verbs
+RESTful which stands for **RE**presentational **S**tate **T**ransfer. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture. To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over HTTP with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers. REST interfaces with external systems using resources identified by URI,  which can be operated upon using standard verbs
 
 ### Where the State comes from
 
@@ -82,22 +82,22 @@ A RESTful server
 
 While designing a RESTful API interface we must keep these 5 points in mind. Each point deserves a paragraph and further explanation. I am leaving it  to explore for others.
 
-1. Expose enterprise data and functionality in API friendly format:  RESTful API must be able to convert complex on-premise application services / microservices into Developer friendly APIs and give developers the resources they need to create applications that deliver real value.
-2. Protect Information and Assets: Ensuring that enterprise systems are protected against message-level attack, hijack and prevent misuse of exposed information.
-3. Authorize Secure, Seamless Access for Valid Identities: Ensure strong Access Control, identity federation and social login functionality in a secure manner. Limiting access to resources based on identity.
-4. Optimizing System Performance and API lifecycle: RESTful API must be fast and optimal to access. This means it client should not take long  to get response from the API server. API must have a life-cycle or distinguishable by proper versioning system
-5. Deployment: RESTful APIs must be easy to deploy in rollback mannar.
+1. **Expose enterprise data and functionality in API friendly format:**  RESTful API must be able to convert complex on-premise application services / microservices into Developer friendly APIs and give developers the resources they need to create applications that deliver real value.
+2. **Protect Information and Assets:** Ensuring that enterprise systems are protected against message-level attack, hijack and prevent misuse of exposed information.
+3. **Authorize Secure, Seamless Access for Valid Identities:** Ensure strong Access Control, identity federation and social login functionality in a secure manner. Limiting access to resources based on identity.
+4. **Optimizing System Performance and API lifecycle:** RESTful API must be fast and optimal to access. This means it client should not take long  to get response from the API server. API must have a life-cycle or distinguishable by proper versioning system
+5. **Deployment:** RESTful APIs must be easy to deploy in rollback mannar.
 
 
 
 ## 6 Understanding RESTful API verbs 
 
-1. GET:  When a client needs to access resources it must initiate a HTTP GET request to the API server. RESTful API Server sends only that information to fulfill clients' needs according to its access level or reject requests with proper error messages. Such kind of requests must be idempotent and safe.
-2. POST:  When a client needs to create a resource it must initiate HTTP POST request to the API server. A RESTful API server must send a resource identifier  on success or reject requests with proper error messages. Such kind of requests are not safe and not idempotent.
-3. PUT: When a client needs to update it must initiate a HTTP PUT call to API Server. Client must send full data of that resource to update while it is initiating a PUT call. Server must send the identifier or updated resources on success.  This type of call is idempotent but not safe.
-4. PATCH: When client does not need to update a whole resource but partially then client must initiate a PATCH request to API server and server must send appropriate identifier or updated resource on success. Some programming languages still do not support PATCH requests. In that case PUT request can be used but Server logic should handle this properly as this request is not idempotent and safe.
-5. DELETE: Client needs to initiate a HTTP DELETE call to API Server when it wants to delete a resource. This call is idempotent but not safe. This is also a non-reversible call so proper caution must be provided.
-6. HEAD and OPTIONS: The OPTIONS method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating a resource retrieval and The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. Both methods are idempotent and safe.
+1. `GET:`  When a client needs to access resources it must initiate a HTTP GET request to the API server. RESTful API Server sends only that information to fulfill clients' needs according to its access level or reject requests with proper error messages. Such kind of requests must be idempotent and safe.
+2. `POST:`  When a client needs to create a resource it must initiate HTTP POST request to the API server. A RESTful API server must send a resource identifier  on success or reject requests with proper error messages. Such kind of requests are not safe and not idempotent.
+3. `PUT:` When a client needs to update it must initiate a HTTP PUT call to API Server. Client must send full data of that resource to update while it is initiating a PUT call. Server must send the identifier or updated resources on success.  This type of call is idempotent but not safe.
+4. `PATCH:` When client does not need to update a whole resource but partially then client must initiate a PATCH request to API server and server must send appropriate identifier or updated resource on success. Some programming languages still do not support PATCH requests. In that case PUT request can be used but Server logic should handle this properly as this request is not idempotent and safe.
+5. `DELETE:` Client needs to initiate a HTTP DELETE call to API Server when it wants to delete a resource. This call is idempotent but not safe. This is also a non-reversible call so proper caution must be provided.
+6. `HEAD and OPTIONS:` The OPTIONS method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating a resource retrieval and The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. Both methods are idempotent and safe.
 
 
 
