@@ -14,12 +14,12 @@ RESTful API best practices include: meaningful resource endpoints, proper HTTP v
 - [6. Understanding RESTful API verbs](#undestanding)
 - [7. Planning a RESTful API](#planning)
 - [8. Uniform Interface](#uniform)
-- [9. Design Pattern of Uniform Interfaces (aka Endpoints)]
-    - [8.1. Overview]
-    - [8.2. Basic Design Patterns]
-- [10. Request and Response Format]
-- [11. Exception Handling and Error Response Format]
-- [12. References/Resources]
+- [9. Design Pattern of Uniform Interfaces (aka Endpoints)](#design)
+    - [8.1. Overview](#design_overview)
+    - [8.2. Basic Design Patterns](#design_basic)
+- [10. Request and Response Format](#request)
+- [11. Exception Handling and Error Response Format](#exception)
+- [12. References/Resources](#references)
 
 
 
@@ -117,9 +117,9 @@ Servers must have uniform Interfaces to access resources which must be unique an
 
 
 
-## 9 Design Pattern of Uniform Interfaces (aka Endpoints)
+## 9. Design Pattern of Uniform Interfaces (aka Endpoints) <a id="design"></a>
 
-### 9.1 Overview
+### 9.1. Overview  <a id="design_overview"></a>
 
 While designing Endpoints we need to keep these things in mind
 
@@ -129,7 +129,7 @@ While designing Endpoints we need to keep these things in mind
 4. Port is optional if services run on standard HTTP port (80)
 5. Listing proper Headers for an endpoint depending on which type of resources we are dealing with
 
-### 9.2 Basic Design Patterns
+### 9.2. Basic Design Patterns <a id="design_basic"></a>
 
 **Legends:** 
 
@@ -153,9 +153,9 @@ Response Header StatusCode must be semantic with [Hypertext Transfer Protocol (H
 
 
 
-## 10 Request and Response Format
+## 10. Request and Response Format <a id="request"></a>
 
-### 10.1 Overview
+### 10.1. Overview
 
 When we design request and response format we must need to keep the following things in mind
 
@@ -169,9 +169,9 @@ When we design request and response format we must need to keep the following th
 8. No extra data should be sent in response unless it makes sense.
 9. Request and Response field names should be camelcase or convention given by corresponding team and must be consistent system-wide.
 
-### 10.2 Accessing Resource(s)
+### 10.2. Accessing Resource(s)
 
-#### 10.2.1 Accessing Collection of Resources
+#### 10.2.1. Accessing Collection of Resources
 
 **EndPoint:* `GET` `/api/{version}/users`
 
@@ -212,7 +212,7 @@ For example here client wants to get User list and If user
 }
 ```
 
-#### 10.2.2 Accessing Single Resource
+#### 10.2.2. Accessing Single Resource
 
 **EndPoint:** `GET` `/api/{version}/users/{identifier}`
 
@@ -252,9 +252,9 @@ For example here client wants to get User list and If user
 }
 ```
 
-### 10.3 Creating A Resource
+### 10.3. Creating A Resource
 
-#### 10.3.1 Single Resource
+#### 10.3.1. Single Resource
 
 **EndPoint:** `POST` `/api/{version}/users`
 
@@ -304,17 +304,17 @@ For example here client wants to get User list and If user. Returning user objec
 }
 ```
 
-### 10.4 Altering  a Resource
+### 10.4. Altering  a Resource
 We can alter a resource in two ways
 
 1. Replacing the resource
 2. Updating the resource
 
-#### 10.4.1 Replacing the Resource
+#### 10.4.1. Replacing the Resource
 
 When we replace a resource we use HTTP PUT method. When we are replacing a resource we must send the all  corresponding fields of  resource. If any field is missing API server must throw a validation error to  client
 
-##### 10.4.1.1 Single Resource
+##### 10.4.1.1. Single Resource
 
 **EndPoint:** `PUT` `/api/{version}/users/{identifier}`
 
@@ -364,9 +364,9 @@ For example here client wants to get User list and If user. Returning user objec
 }
 ```
 
-#### 10.4.2 Updating A Resource
+#### 10.4.2. Updating A Resource
 
-##### 9.4.2.1 Single Resource
+##### 9.4.2.1. Single Resource
 
 **The original Resource**
 
@@ -421,9 +421,9 @@ Accept: application/vnd.api+json; ext=jsonpatch
 
 
 
-## 11 Exception Handling and Error Response Format
+## 11. Exception Handling and Error Response Format <a id="exception"></a>
 
-### 11.1 Standard Status Code for various  common errors
+### 11.1. Standard Status Code for various  common errors
 
 | Error Type | Status Code | Description | 
 | --- | --- | --- |
@@ -476,7 +476,7 @@ ACCEPT: {REQ Data format accepted}
 
 
 
-# 12 References/Resources
+## 12. References/Resources <a id="references"></a>
 
 1. [JSON:API — A specification for building APIs in JSON](http://jsonapi.org)
 2. [OpenAPI-Specification/3.0.3.md at master · OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md)
