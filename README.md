@@ -173,7 +173,7 @@ When we design request and response format we must need to keep the following th
 
 #### 10.2.1. Accessing Collection of Resources
 
-**EndPoint:* `GET` `/api/{version}/users`
+**EndPoint:** `GET` `/api/{version}/users`
 
 **Request Header:**
 
