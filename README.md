@@ -392,7 +392,7 @@ Accept: application/vnd.api+json; ext=jsonpatch;charset=UTF-8
 ```
 [
    { "op": "replace", "path": "/firstName", "value": "Boo" },
-   { "op": "add", "path": "/email", "value": ["pro.nmrony@gmail.com", "pro.nmrony@yahoo.com"] },
+   { "op": "add", "path": "/email", "value": ["aeontanvir@gmail.com", "aeon@yahoo.com"] },
    { "op": "remove", "path": "/lastName"}
 ]
 ```
